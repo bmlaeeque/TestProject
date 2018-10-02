@@ -7,8 +7,9 @@ public class reverseArray {
 		int[] input={1,2,3,4,5,5,6};
 		
 		int i=0;
-		int j=input.length;
+		int j=input.length-1;
 		int temp;
+		
 		
 		while(i<j){
 			temp=input[i];
@@ -16,7 +17,10 @@ public class reverseArray {
 			input[j]=temp;
 			i++;
 			j--;
+			
 		}
-		System.out.println();
-	}
+		for(int a:input){
+			System.out.println(a);
+		}
+	}	
 }

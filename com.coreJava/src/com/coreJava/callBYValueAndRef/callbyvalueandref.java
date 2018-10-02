@@ -2,11 +2,11 @@ package com.coreJava.callBYValueAndRef;
 
 public class callbyvalueandref {
 	/**
-	 * there no concept like call by refrence is java only concept call by value ,if we call
-	 * a method passing a value is known as call by value
+	 * there no concept like call by refrence is java only concept call by value ,
+	 * 			if we call method passing a value is known as call by value
 	 * 
 	 * in which calling method is not effected only called method will effected
-	 * @param args
+	 * 
 	 */
 	int data=50;  
 	  

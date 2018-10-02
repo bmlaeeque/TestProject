@@ -27,7 +27,7 @@ class Sttudent implements Comparable<Sttudent> {
 
 public class comparable {
 	/**
-	 * Q)What is comparable ? its a interface present in java.lang.util package
+	 * Q)What is comparable ? its a interface present in java.lang.util package(compare object with itself)
 	 * and it contain one method 
 	 * 		
 	 * 		(1)compareTO()

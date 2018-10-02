@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Q)what is Comparator? 
+ * Q)what is Comparator? by using this we can compare two object
  * 		its a interface present in java.util package it contain
  * 		two method 
  * 		(1)compare() 

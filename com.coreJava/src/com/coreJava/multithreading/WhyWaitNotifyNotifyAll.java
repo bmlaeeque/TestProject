@@ -4,15 +4,15 @@ package com.coreJava.multithreading;
  * Q)Why wait(), notify() and notifyAll() methods are defined in Object class
  * not Thread class?
  * 
- *  It is because they are related to lock and object has a
- * lock.
+ * It is because they are related to lock and object has a lock.
  * 
- * Q)what happened if i m not calling wait(),notify(),notifyAll() in synchronized block?
+ * Q)what happened if i m not calling wait(),notify(),notifyAll() in
+ * synchronized block?
  * 
- * 			if we don't call wait() , notify() ,notifyAll() in synchronized block then it will throw 
- * 			illegalMonitorStateException
- *Q)what happened if we start current twice ?
- *		if we start thread twice then it will throw illegalStateException
+ * if we don't call wait() , notify() ,notifyAll() in synchronized block then it
+ * will throw illegalMonitorStateException Q)what happened if we start current
+ * twice ? if we start thread twice then it will throw
+ * illegalThreadStateException
  *
  */
 class Customer {
@@ -24,12 +24,15 @@ class Customer {
 		if (this.amount < amount) {
 			System.out.println("Less balance; waiting for deposit...");
 			try {
-				wait();
-			} catch (Exception e) {
+					wait();
+				} 
+				catch (Exception e) {
+					e.printStackTrace();
 			}
+		
+			this.amount -= amount;
+			System.out.println("withdraw completed...");
 		}
-		this.amount -= amount;
-		System.out.println("withdraw completed...");
 	}
 
 	synchronized void deposit(int amount) {
@@ -44,13 +47,17 @@ class WhyWaitNotifyNotifyAll {
 	public static void main(String args[]) {
 		final Customer c = new Customer();
 		new Thread() {
+
 			public void run() {
-				c.withdraw(15000);
+				c.withdraw(15000); // thread-0 access withdrow()
+
 			}
 		}.start();
 		new Thread() {
+
 			public void run() {
-				c.deposit(10000);
+				c.deposit(10000); // thread-1 access deposite()
+
 			}
 		}.start();
 

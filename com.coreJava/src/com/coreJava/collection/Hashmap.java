@@ -69,7 +69,7 @@ public class Hashmap {
 	        System.out.println(p.getName() + "\t" + p.getAge());
 	    }
 	    
-	   // peopleByAge.forEach((p) -> System.out.println(p));//////////////////////////forEach()
+	    peopleByAge.forEach((p) -> System.out.println(p));//////////////////////////forEach()
 	    	
 	}
 	

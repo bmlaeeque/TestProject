@@ -2,23 +2,30 @@ package com.coreJava.logicalInterviewQuestion;
 
 import java.util.Arrays;
 
+import com.coreJava.overloadingMainMethod.mainMethod;
+
 public class removeDuplicateFromArray {
-	public static void m1(int[] input){
+	
+	public static void duplicate(int[] input){
 		int count=0;
-		for(int i=0;i<input.length;i++){
-			for(int j=0;j<input.length;j++){
+		for(int i=0;i<input.length-1;i++){
+			for(int j=i+1;j<input.length;j++){
 				
-				if(i==j){
-					input[count]=input[i];
+				if(input[i]!=input[j]){
+					input[i]=input[count];
 					count++;
 				}
+				break;
 			}
-			System.out.println(Arrays.toString(input));
 		}
+		for(int a:input){
+			System.out.println(a);
+		}
+		
 	}
+	
 	public static void main(String[] args) {
-		System.out.println(new int[] {1,2,3,4,5,4,6,5});
-
+		duplicate(new int[]{1,2,3,4,4,5});
 	}
 
 }

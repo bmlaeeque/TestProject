@@ -1,7 +1,7 @@
 package com.coreJava.multithreading;
 	/**
 	 * Q)what is join()?
-	 * 			if we call join() then it will enter remaining threads into waiting state until current thread completes its execution. 
+	 * 			if we call join() then other threads will enter remaining threads into waiting state until current thread completes its execution. 
 	 * 	
 	 * @author icon
 	 *

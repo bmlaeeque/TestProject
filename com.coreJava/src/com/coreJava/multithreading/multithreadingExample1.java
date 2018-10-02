@@ -3,8 +3,7 @@ package com.coreJava.multithreading;
 public class multithreadingExample1 {
 	/**
 	 * Q)What is process?
-	 * 		process is self contain execution enviremnet  we can also say its a executing program it allocats memory in method area
-	 * 
+	 * 		process is self execution program
 	 * Q)what is Thread?
 	 * 		thread is single task execution of process(program)
 	 * 
@@ -47,10 +46,14 @@ public class multithreadingExample1 {
 	 * 			here it will pause to currently executing thread and give chance to othere thread to execute
 	 * 
 	 * Q)what is wait()?
-	 * 		it tell to current executing thread to release lock and wait until other thread call notify() or notifyAll().
+	 * 		it tell to current executing thread release lock and wait until other thread call notify() or notifyAll().
 	 * Q) what is notify()?
 	 * 			it inform to waiting thread those are waiting for access particular object.
 	 * 
+	 * Q)what happened if i m not calling wait(),notify(),notifyAll() in synchronized block?
+ * 
+ * 			if we don't call wait() , notify() ,notifyAll() in synchronized block then it will throw 
+ * 			illegalMonitorStateException
 	 * 
 	 * Q)Why wait(), notify() and notifyAll() methods are defined in Object class not Thread class?
 It 					is because they are related to lock and object has a lock.
