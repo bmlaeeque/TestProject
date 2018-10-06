@@ -15,7 +15,10 @@ public class whystringisImmutable {
 	 * 
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String s="abc";
+		s.concat("xyz");
+		//s=s.concat("xyz");
+		System.out.println(s);
 
 	}
 
